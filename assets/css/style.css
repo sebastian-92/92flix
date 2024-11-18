@@ -331,8 +331,8 @@ body {
 
 .header {
   position: relative;
-  padding-block: 24px;
-  padding-inline: 16px;
+  padding-block: 12px;
+  padding-inline: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;

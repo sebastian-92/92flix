@@ -88,8 +88,15 @@ fetchDataFromServer(
 
                 <div class="detail-box">
                 <div class="detail-content">
-                    <h1 class="heading">${title}</h1>
-
+                    <h1 class="heading">${title}</h1> <a href='watch.html?id=${movieId}' class="btn" >          <img
+            src="./assets/images/play_circle.png"
+            width="24"
+            height="24"
+            aria-hidden="true"
+            alt="play circle"
+          />
+          <span class="span">Watch Now</span>
+</a>
                     <div class="meta-list">
                     <div class="meta-item">
                         <img

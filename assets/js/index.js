@@ -14,8 +14,8 @@ sidebar();
 // Home page sections (Top rated, Upcoming, Trending Movies)
 const homePageSections = [
   {
-    title: "Upcoming Movies",
-    path: "/movie/upcoming",
+    title: "In Theatres",
+    path: "/movie/now_playing",
   },
   {
     title: "This Week Trending Movies",
@@ -24,6 +24,10 @@ const homePageSections = [
   {
     title: "Top Rated Movies",
     path: "/movie/top_rated",
+  },
+  {
+    title: "More Like Shrek",
+    path: "/movie/808/recommendations",
   },
 ];
 
@@ -139,7 +143,7 @@ const heroBanner = function ({ results: movieList }) {
   pageContent.appendChild(banner);
 
   addHeroSlide();
-
+  console.log(homePageSections)
   // fetch data from home page sections (top rated, upcoming,trending).
   for (const { title, path } of homePageSections) {
     fetchDataFromServer(
@@ -189,6 +193,7 @@ const addHeroSlide = function () {
 };
 
 const createMovieList = function ({ results: movieList }, title) {
+  console.log(`Creating movie list for: ${title}`, movieList);
   const movieListElem = document.createElement("section");
   movieListElem.classList.add("movie-list");
   movieListElem.ariaLabel = `${title}`;
